@@ -36,3 +36,15 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+// contenitore dove andranno le card
+const teamContainer = document.getElementById("team-container");
+
+// chiedo all'api i dati e la gestisco nel then
+axios.get("https://boolean-teachers.github.io/mock/api/members/")
+.then(response => {
+
+  // prendo l'array dei membri
+  const members = response.data;
+
